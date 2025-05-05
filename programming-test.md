@@ -15,17 +15,61 @@ Write a program in the language of your choice where:
 
 > Try to keep the procedure as short as possible.
 
+Solution:
+```python
+import random
+
+for i in range(1, 101):
+    
+    num = random.randint(1, 100)
+    print(f"{i}: {num}", end='')
+    
+    if num % 7 == 0:
+        print("  Lucky number!", end='')
+    print()
+    if i % 5 == 0:
+        print("---")
+```
 ---
 
 ## Exercise 2
 
 ### 1. **What is your understanding of the term “Design Patterns”?**  
-   Provide a description in your own words.
+   Solution:
+#### A Design Pattern is
+   - A description of a standard solution for
+   - A standard design problem
+   - In a certain context
 
 ### 2. **Explain the MVC Pattern**  
    - What does MVC stand for?  
    - Explain the pattern in detail.  
    - What are some use cases for this framework?
+### Solution:
+
+**What MVC stands for**
+It’s short for **Model-View-Controller**.
+
+**How it works, in plain terms**
+
+* **Model**
+  This is where your data lives—think of it as the part that stores things like user info, settings, or any business rules. It doesn’t care how it’s shown on screen or how people click around.
+* **View**
+  This is what people see: buttons, lists, charts, forms. You can have more than one view for the same data (like a table view and a graph view), and each one keeps itself up to date when the model changes.
+* **Controller**
+  This listens for what the user does—clicks, taps, typing—and then tells the model to change or tells the view to redraw. It’s the middleman that keeps the model and view from being too tightly linked.
+
+Putting these three parts together means you can work on your data logic, your screen layout, and your user interactions separately. That makes it simpler to test, tweak, or swap out one piece without touching the others.
+
+---
+
+**MVC in action**
+
+* **Web apps** like Ruby on Rails or ASP.NET MVC
+* **Desktop interfaces** using toolkits such as Java Swing or Cocoa on macos
+* **Mobile apps**, especially early iOS projects or many Android setups
+* **Single-page web apps** with frameworks like Angular or Nextjs
+
 
 ### 3. **List three other design patterns**  
    - Provide names and details for three additional design patterns.
